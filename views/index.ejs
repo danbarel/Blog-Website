@@ -1,0 +1,31 @@
+<% include partials/header %>
+<div class="ui main text container">
+    <div class="ui huge header">This is the index page</div>
+    <% blogs.forEach(function(blog){ %>
+        <div class="ui top attached semgment">
+            <div class="ui divided items">
+                <div class="item">
+                    <div class="image">
+                        <img src="<%= blog.image %>"/>   
+                    </div>
+                    <div class="content">
+                        <a class="header" href="/blogs/<%= blog._id %>">
+                            <%= blog.title %>
+                        </a>
+                        <div class="meta">
+                            <span><%= blog.created %></span>
+                        </div>
+                        <div class="description">
+                            <p><%= blog.body.substring(0,100) %>...</p>
+                        </div>
+                        <div class="extra">
+                            <a  class="ui floated basic teal button" href="/blogs/<%= blog._id %>">Read More</a>
+                            <i class="right chevron icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% }); %>
+</div>
+<% include partials/footer %>
