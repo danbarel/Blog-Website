@@ -1,11 +1,42 @@
-i.icon {
-    font-size: 1.2em;
+.index-nav {
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+    background: none;
 }
 
-.container.main {
-    margin-top: 7em;
+.carousel-item img {
+    max-height: 500px;
 }
 
-form.delete {
+.subscription {
+    background-color: #f0f0f0; 
+}
+
+.subscripe-form {
+    display: inline;
+}
+
+.index-blog-post {
+    position: relative;
+    text-align: center;
+}
+
+.index-blog-post-description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+footer {
+    height: 50px;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer h5 {
     display: inline;
 }
